@@ -27,5 +27,12 @@ public class QuickUnionUF {
     int j = root(q);
     id[i] = j;
   }
+  
+  public void showId()
+  {
+    for(int i = 0; i < id.length; i++) {
+      System.out.print(id[i] + " ");
+    }
+  }
 
 }

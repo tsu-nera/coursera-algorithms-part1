@@ -10,7 +10,7 @@ public class WeightedQuickUnionUF {
     sz = new int[N];
     for(int i = 0; i < N; i++) {
       id[i] = i;
-      sz[i] = 0;
+      sz[i] = 1;
     }
   }
   
@@ -18,7 +18,7 @@ public class WeightedQuickUnionUF {
   {
     while(i != id[i]) {
       // path compression
-      id[i] = id[id[i]];
+      // id[i] = id[id[i]];
       i = id[i];
     }
     return i;
@@ -35,10 +35,18 @@ public class WeightedQuickUnionUF {
     int i = root(p);
     int j = root(q);
     if( sz[i] < sz[j]) {
-      id[i] = j; sz[i] += sz[j];
+      id[i] = j; sz[j] += sz[i];
     }
     else {
       id[j] = i; sz[i] += sz[j];
     }
+  }
+  
+  public void showId()
+  {
+    for(int i = 0; i < id.length; i++) {
+      System.out.print(id[i] + " ");
+    }
+    System.out.println();
   }
 }

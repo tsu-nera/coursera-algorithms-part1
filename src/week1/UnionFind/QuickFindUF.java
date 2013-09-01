@@ -24,5 +24,12 @@ public class QuickFindUF {
       if (id[i] == pid ) id[i] = qid;
     }
   }
+  
+  public void showId()
+  {
+    for(int i = 0; i < id.length; i++) {
+      System.out.print(id[i] + " ");
+    }
+  }
 
 }
