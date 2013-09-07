@@ -1,10 +1,15 @@
-package week2.StackAndQueues;
+package week2;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class LectureTest {
+import week2.StackAndQueues.FixedCapacityStack;
+import week2.StackAndQueues.LinkedStackOfStrings;
+import week2.StackAndQueues.ResizingArrayStackOfStrings;
+import week2.StackAndQueues.Stack;
+
+public class StackAndQueuesTest {
 
    @Test
    public void LinkedStackOfStrings() {
