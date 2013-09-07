@@ -56,6 +56,57 @@ public class LectureTest {
      
      assertEquals(expect, actual);
    }
+   
+   @Test
+   public void Stack() {
+     Stack<String> stack = new Stack<String>();
+     
+     String expect = "to be not that or be";
+     String actual = "";
+     
+     stack.push("to");
+     stack.push("be");
+     stack.push("or");
+     stack.push("not");
+     stack.push("to");
+     actual += stack.pop() + " ";
+     stack.push("be");
+     actual += stack.pop() + " ";
+     actual += stack.pop() + " ";
+     stack.push("that");
+     actual += stack.pop() + " ";
+     actual += stack.pop() + " ";
+     actual += stack.pop();
+     stack.push("is");
+     
+     assertEquals(expect, actual);
+   }
+
+   @Test
+   public void FixedCapacityStack() {
+     FixedCapacityStack<String> stack = new FixedCapacityStack<String>(10);
+     
+     String expect = "to be not that or be";
+     String actual = "";
+     
+     stack.push("to");
+     stack.push("be");
+     stack.push("or");
+     stack.push("not");
+     stack.push("to");
+     actual += stack.pop() + " ";
+     stack.push("be");
+     actual += stack.pop() + " ";
+     actual += stack.pop() + " ";
+     stack.push("that");
+     actual += stack.pop() + " ";
+     actual += stack.pop() + " ";
+     actual += stack.pop();
+     stack.push("is");
+     
+     assertEquals(expect, actual);
+   }
+
 
 }
 
