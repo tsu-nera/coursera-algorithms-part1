@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import week2.ElementarySorts.Insertion;
 import week2.ElementarySorts.Selection;
 import edu.princeton.cs.introcs.StdRandom;
 
@@ -20,8 +21,20 @@ public class ElementarySortsTest {
 
    Selection.sort(a);
    assertTrue(Selection.isSorted(a));
-
   }
-   
+
+  @Test
+  public void InsertionClient1()
+  {
+    int N = 10;
+    Double[] a = new Double[N];
+    for (int i = 0; i < N; i++) {
+      a[i] = StdRandom.uniform();
+    }
+
+   Insertion.sort(a);
+   assertTrue(Selection.isSorted(a));
+  }
+
 
 }
