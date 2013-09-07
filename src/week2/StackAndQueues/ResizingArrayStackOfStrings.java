@@ -4,7 +4,6 @@ package week2.StackAndQueues;
 public class ResizingArrayStackOfStrings {
 
   private Node first = null;
-  
   private String[] s;
   private int N = 0;
   
@@ -15,10 +14,8 @@ public class ResizingArrayStackOfStrings {
   }
   
   public ResizingArrayStackOfStrings()
-  { 
-    s = new String[1];
-  }
-  
+  { s = new String[1]; }
+   
   public boolean isEmpty()
   {
     return first == null;
