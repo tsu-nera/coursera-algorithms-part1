@@ -37,7 +37,6 @@ public class ElementarySortsTest {
    assertTrue(Selection.isSorted(a));
   }
 
-  @Test
   public void ShellClient1()
   {
     int N = 10;
@@ -48,6 +47,15 @@ public class ElementarySortsTest {
 
    Shell.sort(a);
    assertTrue(Selection.isSorted(a));
+  }
+
+  @Test
+  public void ExcerciseShell()
+  {
+    int N = 10;
+    Comparable[] a = {92, 74, 26, 52, 71, 38, 33, 11, 77, 35};
+
+   Shell.sort(a);
   }
 
 

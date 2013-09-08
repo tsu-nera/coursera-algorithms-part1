@@ -18,6 +18,11 @@ public class Shell {
         }
       }
       
+//      for(int i=0;i<N;i++) {
+//        System.out.print(a[i] + " ");
+//      }
+//      System.out.println();
+
       h = h/3;
     }    
   }
