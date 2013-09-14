@@ -25,7 +25,7 @@ public class Quick {
   
   public static void sort(Comparable[] a)
   {
-    StdRandom.shuffle(a);
+    //StdRandom.shuffle(a);
     sort(a, 0, a.length-1);
   }
   
