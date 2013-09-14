@@ -25,7 +25,7 @@ public class MergeBU {
     }
     
     assert isSorted(a, lo, hi);
-    
+    //show(a);
   }
     
   public static void sort(Comparable[] a)
