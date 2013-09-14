@@ -2,7 +2,7 @@ package week3.Mergesort;
 
 import edu.princeton.cs.introcs.StdOut;
 
-public class Merge {
+public class MergeBU {
 
   private static final int CUTOFF = 7;
 
@@ -25,25 +25,18 @@ public class Merge {
     }
     
     assert isSorted(a, lo, hi);
+    
   }
-  
-  private static void sort(Comparable[] a, Comparable[] aux, int lo, int hi)
-  {
-//    if (hi <= lo + CUTOFF - 1) {
-//      Insertion.sort(a, lo, hi);
-//      return;
-//    }
-    if (hi <= lo) return;
-    int mid = lo + (hi - lo) / 2;
-    sort(a, aux, lo, mid);
-    sort(a, aux, mid+1, hi);
-    merge(a, aux, lo, mid, hi);
-  }
-  
+    
   public static void sort(Comparable[] a)
   {
-    Comparable[] aux = new Comparable[a.length];
-    sort(a, aux, 0, a.length - 1);
+    int N = a.length;
+    Comparable[] aux = new Comparable[N];
+    for(int sz = 1; sz < N; sz = sz+sz ) {
+      for(int lo = 0; lo < N-sz; lo += sz*2) {
+        merge(a, aux, lo, lo+sz-1, Math.min(lo+sz+sz-1,N-1));
+      }
+    }
   }
   
   private static boolean less(Comparable v, Comparable w)

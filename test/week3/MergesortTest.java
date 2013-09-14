@@ -5,6 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 import week3.Mergesort.Merge;
+import week3.Mergesort.MergeBU;
 import edu.princeton.cs.introcs.StdRandom;
 
 public class MergesortTest {
@@ -12,13 +13,26 @@ public class MergesortTest {
   @Test
   public void MergeSortClient1()
   {
-    int N = 4;
+    int N = 10;
     Double[] a = new Double[N];
     for (int i = 0; i < N; i++) {
       a[i] = StdRandom.uniform();
     }
 
    Merge.sort(a);
+   assertTrue(Merge.isSorted(a));
+  }
+
+  @Test
+  public void MergeSortBUClient()
+  {
+    int N = 10;
+    Double[] a = new Double[N];
+    for (int i = 0; i < N; i++) {
+      a[i] = StdRandom.uniform();
+    }
+
+   MergeBU.sort(a);
    assertTrue(Merge.isSorted(a));
   }
 
