@@ -15,6 +15,19 @@ public class Insertion {
     }
   }
   
+  public static void sort(Comparable[] a, int lo, int hi) {
+    
+    for(int i = lo; i <= hi; i++)
+    {
+      for (int j = i; j > 0; j--) {
+        if(less(a[j], a[j-1])) {
+          exch(a, j, j-1);
+        }
+        else break;
+      }
+    }
+  }
+  
   private static boolean less(Comparable v, Comparable w)
   {
     return (v.compareTo(w) < 0); 
@@ -34,5 +47,6 @@ public class Insertion {
     }
     return true;
   }
+
 
 }
