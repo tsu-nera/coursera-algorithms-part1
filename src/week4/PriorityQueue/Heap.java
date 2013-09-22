@@ -10,8 +10,8 @@ public class Heap
     
     while (N > 1)
     {
-      exch(a, 1, N);
-      sink(a, 1, --N);
+      exch(a, 1, N--);
+      sink(a, 1, N);
     }
   }
   
@@ -28,12 +28,12 @@ public class Heap
   }
   
   private static boolean less(Comparable[] a, int i, int j)
-  { return a[i].compareTo(a[i]) < 0; }
+  { return a[i-1].compareTo(a[i-1]) < 0; }
   
   private static void exch(Comparable[] a, int i, int j)
   { 
-    Comparable t = a[i];
-    a[i] = a[j];
-    a[j] = t; 
+    Comparable t = a[i-1];
+    a[i-1] = a[j-1];
+    a[j-1] = t; 
   }
 }

@@ -1,5 +1,7 @@
 package week4.PriorityQueue;
 
+import edu.princeton.cs.introcs.StdOut;
+
 public class MaxPQ<Key extends Comparable<Key>>
 {
   private Key[] pq;
@@ -55,5 +57,13 @@ public class MaxPQ<Key extends Comparable<Key>>
     Key t = pq[i];
     pq[i] = pq[j];
     pq[j] = t; 
+  }
+  
+  public void show()
+  {
+    for(int i=0; i<pq.length; i++){
+        StdOut.print(pq[i] + " ");
+    }
+    StdOut.println();
   }
 }
